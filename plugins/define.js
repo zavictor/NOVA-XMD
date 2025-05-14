@@ -28,7 +28,7 @@ const wordInfo = `
 📝 *Example*: ${example}
 🔗 *Synonyms*: ${synonyms}
 
-> *@ 💎 popkid 💎*`;
+> *@ 💎 ʙ.ᴍ.ʙ-xᴍᴅ-ᴠ2 💎*`;
 
                                  return reply(wordInfo);
                              } catch (e) {
