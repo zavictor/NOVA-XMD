@@ -27,8 +27,7 @@
 
 ## 🚀 Deployment Steps
 
-<sub>➊ Follow GitHub Account:</sub>  
-(https://github.com/bmb200)  
+<sub>➊ Follow GitHub Account:</sub>    
 [![](https://img.shields.io/badge/-Follow%20Account-orange?style=for-the-badge&logo=github)](https://github.com/bmb200)
 
 ---
