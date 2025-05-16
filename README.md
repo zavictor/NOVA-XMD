@@ -38,12 +38,12 @@
 ---
 
 <sub>➌ QR CODE (Session ID):</sub>  
-[![](https://img.shields.io/badge/-Generate%20Session-CC00FF?style=for-the-badge&logo=codepen)](https://bmb-zqqf.onrender.com)
+[![](https://img.shields.io/badge/-Generate%20Session-CC00FF?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/pair)
 
 ---
 
 <sub>➌ Pair Code (Session ID):</sub>  
-[![](https://img.shields.io/badge/-Generate%20Session-CC00FF?style=for-the-badge&logo=codepen)](https://bmb-zqqf.onrender.com)
+[![](https://img.shields.io/badge/-Generate%20Session-CC00FF?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/)
 
 ---
 
