@@ -20,7 +20,7 @@
 </p>
 
 <div align="center">
-  <img src="https://files.catbox.moe/91znmc.webp" width="250" style="border-radius: 20px;" />
+  <img src="https://files.catbox.moe/mi4qng.jpg" width="250" style="border-radius: 20px;" />
 </div>
 
 ---
@@ -28,7 +28,7 @@
 ## 🚀 Deployment Steps
 
 <sub>➊ Follow GitHub Account:</sub>  
-[Follow BMB](https://github.com/bmb200)  
+(https://github.com/bmb200)  
 [![](https://img.shields.io/badge/-Follow%20Account-orange?style=for-the-badge&logo=github)](https://github.com/bmb200)
 
 ---
