@@ -1,4 +1,4 @@
-<h1 align="center">✨ B.M.B-XMD V4.0 ✨</h1>
+<h1 align="center">🔥B.M.B-XMD-V2🔥</h1>
 
 <p align="center">
   <a href="https://github.com/bmb200?tab=followers">
