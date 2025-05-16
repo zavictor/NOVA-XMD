@@ -125,7 +125,7 @@ const port = process.env.PORT || 9090;
 ├─ 📢 *Join Our Channel:*  
 │   Click [**Here**](https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z) to join!  
 ├─ ⭐ *Give Us a Star:*  
-│   Star Us [**Here**](https://github.com/bwbxmd/B.M.B-XMD-V2)!  
+│   Star Us [**Here**](https://github.com/bmb200/B.M.B-XMD-V2)!  
 ╰─🛠️ *Prefix:* \`${prefix}\`
 
 > _© MADE BY BMB_`;
