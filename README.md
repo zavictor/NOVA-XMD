@@ -44,6 +44,10 @@
 
 <sub>➍ Deploy Options:</sub>  
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=45&pause=1000&color=FF0000&center=true&vCenter=true&width=1000&lines=LIST-DEPLOY+NOW;Modern+Bot+DEPLOY+GUIDE" alt="Typing SVG" />
+</p>
+
 **Heroku**  
 [![](https://img.shields.io/badge/-Deploy%20To%20Heroku-6971FF?style=for-the-badge&logo=heroku)](https://dashboard.heroku.com/new?template=https://github.com/bmb200/B.M.B-XMD-V2/tree/main)
 
