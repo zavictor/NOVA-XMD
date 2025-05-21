@@ -20,7 +20,7 @@
 </p>
 
 <div align="center">
-  <img src="https://files.catbox.moe/mi4qng.jpg" width="250" style="border-radius: 20px;" />
+  <img src="https://files.catbox.moe/6lwftg.jpg" width="250" style="border-radius: 20px;" />
 </div>
 
 ---
