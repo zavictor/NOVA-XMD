@@ -54,7 +54,7 @@
 </p>
 
 **Heroku**  
-[![](https://img.shields.io/badge/-Deploy%20To%20Heroku-6971FF?style=for-the-badge&logo=heroku)](https://dashboard.heroku.com/new?template=https://github.com/bwb200/B.M.B-XMD/tree/main)
+[![](https://img.shields.io/badge/-Deploy%20To%20Heroku-6971FF?style=for-the-badge&logo=heroku)](https://dashboard.heroku.com/new?template=https://github.com/bmb200/B.M.B-XMD/tree/main)
 
 **Render**  
 [![](https://img.shields.io/badge/-Deploy%20on%20Render-black?style=for-the-badge&logo=render)](https://dashboard.render.com/web/new)
