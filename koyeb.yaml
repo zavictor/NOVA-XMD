@@ -1,6 +1,6 @@
-name: b.m.b-xmd-v2
+name: B.M.B-XMD
 services:
-  - name: b.m.b-xmd-v2-service
+  - name: B.M.B-XMD-service
     type: web
     ports:
       - 5000
