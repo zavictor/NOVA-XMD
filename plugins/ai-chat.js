@@ -3,7 +3,7 @@ const axios = require('axios');
 
 cmd({
     pattern: "ai",
-    alias: ["bot", "dj", "gpt", "gpt4", "bing"],
+    alias: ["bot", "dj", "gpt7", "gpt4", "bing"],
     desc: "Chat with an AI model",
     category: "ai",
     react: "🤖",
@@ -11,22 +11,22 @@ cmd({
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
     try {
-        if (!q) return reply("Please provide a message for the AI.\nExample: `.ai Hello`");
+        if (!q) return reply("Please provide a message for the gpt.\nExample: `.gpt Hello`");
 
         const apiUrl = `https://lance-frank-asta.onrender.com/api/gpt?q=${encodeURIComponent(q)}`;
         const { data } = await axios.get(apiUrl);
 
         if (!data || !data.message) {
             await react("❌");
-            return reply("AI failed to respond. Please try again later.");
+            return reply("gpt failed to respond. Please try again later.");
         }
 
-        await reply(`🤖 *AI Response:*\n\n${data.message}`);
+        await reply(`🤖 *𝐁.𝐌.𝐁-𝐗𝐌𝐃 Response:*\n\n${data.message}`);
         await react("✅");
     } catch (e) {
-        console.error("Error in AI command:", e);
+        console.error("Error in gpt command:", e);
         await react("❌");
-        reply("An error occurred while communicating with the AI.");
+        reply("An error occurred while communicating with the gpt.");
     }
 });
 
@@ -34,13 +34,13 @@ cmd({
     pattern: "gpt",
     alias: ["chatgpt", "gpt3", "open-gpt"],
     desc: "Chat with OpenAI",
-    category: "ai",
+    category: "gpt",
     react: "🤦",
     filename: __filename
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
     try {
-        if (!q) return reply("Please provide a message for gpt.\nExample: `.gpt Hello`");
+        if (!q) return reply("Please provide a message for gpt.\nExample: `.openai Hello`");
 
         const apiUrl = `https://vapis.my.id/api/openai?q=${encodeURIComponent(q)}`;
         const { data } = await axios.get(apiUrl);
@@ -50,7 +50,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
             return reply("OpenAI failed to respond. Please try again later.");
         }
 
-        await reply(`🤖 *gpt Response:*\n\n${data.result}`);
+        await reply(`🤖 *𝐁.𝐌.𝐁-𝐗𝐌𝐃 Response:*\n\n${data.result}`);
         await react("✅");
     } catch (e) {
         console.error("Error in gpt command:", e);
@@ -89,3 +89,4 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
 });
 
 
+    
