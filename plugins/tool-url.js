@@ -65,7 +65,7 @@ cmd({
       `*${mediaType} Uploaded Successfully*\n\n` +
       `*Size:* ${formatBytes(mediaBuffer.length)}\n` +
       `*URL:* ${mediaUrl}\n\n` +
-      `> © Uploaded by NEXUS TECH ☣️`
+      `> © Uploaded by 𝐁.𝐌.𝐁-𝐗𝐌𝐃 ⏳`
     );
 
   } catch (error) {
