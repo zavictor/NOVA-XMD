@@ -41,7 +41,7 @@ OWNER_NUMBER: process.env.OWNER_NUMBER || "255767862457",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "𝙱.𝙼.𝙱-𝚇𝙼𝙳",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*© powered by bmb-xmd*",
+DESCRIPTION: process.env.DESCRIPTION || "*© powered by 𝙱.𝙼.𝙱-𝚇𝙼𝙳*",
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/6lwftg.jpg",
 // add img for alive msg
@@ -80,3 +80,4 @@ ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log",
 AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
 // make it true for auto recoding 
 };
+    
