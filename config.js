@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "BMB-XMD~vFAxTbJI#dEsYrYebvzEn_f5fg2_byNNKntlNkfS-UdfoCjn4PR4",
+SESSION_ID: process.env.SESSION_ID || "BMB-XMD~eQoyWLSA#yE3oyZcuZqClbsxquWU5KzgFbahrUzsJSWB5yAqobRE",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
@@ -25,11 +25,11 @@ MENTION_REPLY: process.env.MENTION_REPLY || "false",
 // make true if want auto voice reply if someone menetion you 
 MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/6lwftg.jpg",
 // add custom menu and mention reply image url
-PREFIX: process.env.PREFIX || ".",
+PREFIX: process.env.PREFIX || "*",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "NEXUS-XMD",
+BOT_NAME: process.env.BOT_NAME || "B.M.B-XMD",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "NEXUS-XMD",
+STICKER_NAME: process.env.STICKER_NAME || "B.M.B-XMD",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
