@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "",
+SESSION_ID: process.env.SESSION_ID || "BMB-XMD~vFAxTbJI#dEsYrYebvzEn_f5fg2_byNNKntlNkfS-UdfoCjn4PR4",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
@@ -27,9 +27,9 @@ MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/6lwftg.j
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "B.M.B-XMD",
+BOT_NAME: process.env.BOT_NAME || "NEXUS-XMD",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "B.M.B-XMD",
+STICKER_NAME: process.env.STICKER_NAME || "NEXUS-XMD",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
@@ -77,7 +77,8 @@ ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log", 
 // change it to 'same' if you want to resend deleted message in same chat 
-AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
+AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
+// make it true for auto recoding
+ANTICALL: process.env.ANTICALL || "false"
 // make it true for auto recoding 
-};
-    
+};    
