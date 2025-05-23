@@ -1,6 +1,6 @@
 {
   "name": "B.M.B-XMD",
-  "version": "4.0.0",
+  "version": "4.5.0",
   "description": "A WhatsApp Bot Created By bmb200",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "restart": "pm2 restart B.M.B-XMD"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
+    "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.7.1",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
