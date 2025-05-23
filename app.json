@@ -2,7 +2,7 @@
   "name": "B.M.B-XMD",
   "description": "Javascript WhatsApp bot made by bmb200",
   "logo": "https://files.catbox.moe/6lwftg.jpg",
-  "keywords": ["B.M.B-XMD"],
+  "keywords": [".B.M.B-XMD"],
   "success_url": "/",
 
     "stack": "container",
@@ -79,7 +79,7 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY NEXUS-XMD 🖤*"
+      "value": "*SEEN YOUR STATUS BY B.M.B-XMD 🖤*"
    
      }, 
     
@@ -92,7 +92,7 @@
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "255767862457"
+      "value": "255"
 
     }, 
 
@@ -109,14 +109,21 @@
       "value": "true"
       
     },
+
+     "ANTI_LINK_KICK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "false"
+      
+    },
     
     "ANTI_BAD": {
       "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
       "value": "false"
-    }, 
+    },
 
-    "MENTION_REPLY": {
+   "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
       "value": "false"
@@ -127,17 +134,17 @@
       "required": false,
       "value": "https://files.catbox.moe/6lwftg.jpg"
     },
-     
-    "DESCRIPTION": {
+    
+     "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙱.𝙼.𝙱-𝚇𝙼𝙳*"
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙ.ᴍ.ʙ-xᴍᴅ*"
     },
 
       "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     
     "AUTO_RECORDING": {
@@ -176,6 +183,18 @@
       "required": false,
       "value": "log"
     }, 
+
+    "ADMIN_EVENTS": {
+      "description": "make it true if want know who promote or demote a member .",
+      "required": false,
+      "value": "false"
+    },
+
+    "WELCOME": {
+      "description": "make it true if want goodbye and welcome message in groups.",
+      "required": false,
+      "value": "true"
+    },
 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",
