@@ -1,8 +1,8 @@
 {
   "name": "B.M.B-XMD",
   "description": "Javascript WhatsApp bot made by bmb200",
-  "logo": "https://files.catbox.moe/6lwftg.jpg",
-  "keywords": [".B.M.B-XMD"],
+  "logo": "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/menu2.jpg",
+  "keywords": ["B.M.B-XMD"],
   "success_url": "/",
 
     "stack": "container",
@@ -79,7 +79,8 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY B.M.B-XMD 🖤*"
+      "value": "*SEEN YOUR STATUS BY B
+      M.B-XMD 🖤*"
    
      }, 
     
@@ -92,7 +93,7 @@
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "255"
+      "value": "2557678624="
 
     }, 
 
@@ -132,13 +133,13 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": false,
-      "value": "https://files.catbox.moe/6lwftg.jpg"
+      "value": "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/menu2.jpg"
     },
     
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙ.ᴍ.ʙ-xᴍᴅ*"
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙱.𝙼.𝙱-𝚇𝙼𝙳*"
     },
 
       "DELETE_LINKS": {
@@ -187,7 +188,7 @@
     "ADMIN_EVENTS": {
       "description": "make it true if want know who promote or demote a member .",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
     "WELCOME": {

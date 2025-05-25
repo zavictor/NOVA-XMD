@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "BMB-XMD~eQoyWLSA#yE3oyZcuZqClbsxquWU5KzgFbahrUzsJSWB5yAqobRE",
+SESSION_ID: process.env.SESSION_ID || "nexus~qR400TaC#nkTebNRFO85be8uhSzU-FF2x8dGUj5bcAiVDis6JE38",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
@@ -23,9 +23,9 @@ ANTI_LINK: process.env.ANTI_LINK || "true",
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
 // make true if want auto voice reply if someone menetion you 
-MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/6lwftg.jpg",
+MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/menu2.jpg",
 // add custom menu and mention reply image url
-PREFIX: process.env.PREFIX || "*",
+PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
 BOT_NAME: process.env.BOT_NAME || "B.M.B-XMD",
 // add bot namw here for menu
@@ -43,7 +43,7 @@ OWNER_NAME: process.env.OWNER_NAME || "𝙱.𝙼.𝙱-𝚇𝙼𝙳",
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "*© powered by 𝙱.𝙼.𝙱-𝚇𝙼𝙳*",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/6lwftg.jpg",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/menu2.jpg",
 // add img for alive msg
 LIVE_MSG: process.env.LIVE_MSG || "> AM ACTIVE *B.M.B-XMD*⚡",
 // add alive msg here 
@@ -55,7 +55,7 @@ ANTI_BAD: process.env.ANTI_BAD || "false",
 // false or true for anti bad words  
 MODE: process.env.MODE || "public",
 // make bot public-private-inbox-group 
-ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "false",
+ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "true",
 // make anti link true,false for groups 
 AUTO_VOICE: process.env.AUTO_VOICE || "false",
 // make true for send automatic voices
@@ -67,7 +67,7 @@ ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
 // maks true for always online 
 PUBLIC_MODE: process.env.PUBLIC_MODE || "true",
 // make false if want private mod
-AUTO_TYPING: process.env.AUTO_TYPING || "false",
+AUTO_TYPING: process.env.AUTO_TYPING || "true",
 // true for automatic show typing   
 READ_CMD: process.env.READ_CMD || "false",
 // true if want mark commands as read 
