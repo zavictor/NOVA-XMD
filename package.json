@@ -4,7 +4,7 @@
   "description": "A WhatsApp Bot Created By bmb200",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name NEXUS-XMD",
+    "start": "pm2 start index.js --deep-monitoring --attach --name B.M.B-XMD",
     "stop": "pm2 stop B.M.B-XMD",
     "restart": "pm2 restart B.M.B-XMD"
   },
