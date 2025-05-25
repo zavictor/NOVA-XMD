@@ -1,4 +1,4 @@
-// code by ⿻ ⌜ PKDRILLER ⌟⿻⃮͛🇰🇪𖤐
+// code by ⿻ ⌜ 𝐁.𝐌.𝐁-𝐗𝐌𝐃 ⌟⿻⃮͛🚘𖤐
 
 const axios = require("axios");
 const config = require('../config');
