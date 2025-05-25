@@ -1,7 +1,7 @@
 {
   "name": "B.M.B-XMD",
   "description": "Javascript WhatsApp bot made by bmb200",
-  "logo": "https://files.catbox.moe/6lwftg.jpg",
+  "logo": "https://files.catbox.moe/md9mwj.jpg",
   "keywords": ["B.M.B-XMD"],
   "success_url": "/",
 
@@ -22,7 +22,7 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": true,
-      "value": "https://files.catbox.moe/6lwftg.jpg"
+      "value": "https://files.catbox.moe/md9mwj.jpg"
     }, 
       
     "PREFIX": {
@@ -105,13 +105,13 @@
     "DELETE_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": false,
-      "value": "false"
+      "value": "true"
     }, 
     
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
-      "value": "false"
+      "value": "true"
     },
     
     "ADMIN_EVENTS": {
@@ -123,20 +123,20 @@
     "WELCOME": {
       "description": "make it true if want goodbye and welcome message in groups.",
       "required": true,
-      "value": "false"
+      "value": "true"
     },
      
     "ANTI_CALL": {
       "description": "Make it true if you want bot auto call rejected.",
       "required": true,
-      "value": "false"
+      "value": "true"
       
     }, 
     
     "ANTI_BAD_WORD": {
       "description": "Make it true if you want bot auto delete bad words.",
       "required": true,
-      "value": "false"
+      "value": "true"
     }, 
     
     "AUTO_RECORDING": {
@@ -148,7 +148,7 @@
     "AUTO_TYPING": {
       "description": "Make it true if you want auto typing.",
       "required": true,
-      "value": "false"
+      "value": "true"
     },
 
     "AUTO_REACT": {
