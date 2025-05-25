@@ -19,7 +19,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 let dec = `    
 ⟣──────────────────⟢
-▧ *ᴄʀᴇᴀᴛᴏʀ* : *NEXUS-XMD  (🪀)*
+▧ *ᴄʀᴇᴀᴛᴏʀ* : *𝐁.𝐌.𝐁-𝐗𝐌𝐃  (🚘)*
 ▧ *ᴍᴏᴅᴇ* : *${config.MODE}*
 ▧ *ᴘʀᴇғɪx* : *${config.PREFIX}*
 ▧ *ʀᴀᴍ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
@@ -28,7 +28,7 @@ let dec = `
 
 ⟣──────────────────⟢
 
-> ☣️ NEXUS-BOT ☣️ 
+> ☣️ B.M.B-BOT ☣️ 
 
 ⟣──────────────────⟢
 ${readMore}
@@ -39,9 +39,9 @@ https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z
 
 [https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z]
 
-\ PK DRILLER\ *Dev🧑‍💻*
+\ 𝐁.𝐌.𝐁-𝐗𝐌𝐃\ *Dev🧑‍💻*
 
-wa.me/+254794146821 ?text=Support!
+wa.me/255767862457 ?text=Support!
 
 ⟣──────────────────⟢
 
