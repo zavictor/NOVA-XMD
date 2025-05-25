@@ -35,7 +35,7 @@ cmd({
         // Send result
         await client.sendMessage(from, {
             image: imageBuffer,
-            caption: "> Powered By Nexus tech ☣️",
+            caption: "> Powered By 𝙱.𝙼.𝙱-𝚇𝙼𝙳 ☣️",
             mimetype: 'image/png'
         }, { quoted: message });
 
