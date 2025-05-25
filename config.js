@@ -22,7 +22,7 @@ ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group  
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot
-MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/md9mwj.jpg",
+MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/6lwftg.jpg",
 // add custom menu and mention reply image url   
 BOT_NAME: process.env.BOT_NAME || "B.M.B-XMD",
 // add bot namw here for menu
@@ -40,7 +40,7 @@ OWNER_NAME: process.env.OWNER_NAME || "bmb xmd",
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙱.𝙼.𝙱-𝚇𝙼𝙳*",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/md9mwj.jpg",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/6lwftg.jpg",
 // add img for alive msg
 LIVE_MSG: process.env.LIVE_MSG || "> Zinda Hun Yar *B.M.B-XMD*⚡",
 // add alive msg here 
