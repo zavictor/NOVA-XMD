@@ -75,7 +75,7 @@ cmd({
     await reply(
       `🔍 *Image Analysis Results*\n\n` +
       `${scanResponse.data.result}\n\n` +
-      `> © Powered by Pkdriller ✅`
+      `> © Powered by 𝙱.𝙼.𝙱-𝚇𝙼𝙳 ✅`
     );
 
   } catch (error) {
