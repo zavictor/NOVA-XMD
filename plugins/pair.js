@@ -7,7 +7,7 @@ cmd({
     react: "✅",
     desc: "Get pairing code for B.M.B-XMD bot",
     category: "download",
-    use: ".pair 25576786XXX",
+    use: ".pair 255767862457XXX",
     filename: __filename
 }, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, senderNumber, reply }) => {
     try {
@@ -16,7 +16,7 @@ cmd({
 
         // Validate phone number format
         if (!phoneNumber || phoneNumber.length < 10 || phoneNumber.length > 15) {
-            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 255767862XXX`");
+            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 923427582XXX`");
         }
 
         // Make API request to get pairing code
@@ -27,7 +27,7 @@ cmd({
         }
 
         const pairingCode = response.data.code;
-        const doneMessage = "> *BMB-XMD PAIRING COMPLETED*";
+        const doneMessage = "> *B.M.B-XMD PAIRING COMPLETED*";
 
         // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
