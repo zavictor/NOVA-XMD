@@ -11,7 +11,7 @@ cmd({
     alias : "version",
     desc: " allmenu",
     category: "allmenu",
-    react: "🫅",
+    react: "🦜",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -19,46 +19,42 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 let dec = `    
 ⟣──────────────────⟢
-▧ *ᴄʀᴇᴀᴛᴏʀ* : *𝐁.𝐌.𝐁-𝐗𝐌𝐃  (🚘)*
+▧ *ᴄʀᴇᴀᴛᴏʀ* : *B.M.B-XMD  (🇹🇿)*
 ▧ *ᴍᴏᴅᴇ* : *${config.MODE}*
 ▧ *ᴘʀᴇғɪx* : *${config.PREFIX}*
 ▧ *ʀᴀᴍ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ▧ *ᴠᴇʀsɪᴏɴ* : *V.5* ⚡
 ▧ *ᴜᴘᴛɪᴍᴇ* : ${runtime(process.uptime())}
-
 ⟣──────────────────⟢
 
-> ☣️ B.M.B-BOT ☣️ 
+> 𝐁.𝐌.𝐁-𝐗𝐌𝐃
 
 ⟣──────────────────⟢
 ${readMore}
-\ CHANNEL🛠️\
+CHANNEL🛠️
 https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z
 
-\ GROUP\ 👥
+GROUP 👥
+https://chat.whatsapp.com/JpIXcc3AndB3d9pdK2Cg1I
 
-[https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z]
-
-\ 𝐁.𝐌.𝐁-𝐗𝐌𝐃\ *Dev🧑‍💻*
-
-wa.me/255767862457 ?text=Support!
+B.M.B-XMD *Dev🧑‍💻*
+https://wa.me/255767862457?text=Support!
 
 ⟣──────────────────⟢
-
 `;
 
 await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/6lwftg.jpg` },
+                image: { url: `https://i.ibb.co/QFQfWrZF/bmb-xmd.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: 'https://files.catbox.moe/6lwftg.jpg',
-                        newsletterName: '『 ☣️ B.M.B-XMD 🦖 』',
+                        newsletterJid: '120363382023564830@newsletter',
+                        newsletterName: '『 B.M.B-XMD 』',
                         serverMessageId: 143
                     }
                 }
@@ -78,4 +74,3 @@ await conn.sendMessage(
         reply(`${e}`);
     }
 });
-    
