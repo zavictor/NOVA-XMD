@@ -1,4 +1,4 @@
-// code by ⿻ ⌜ 𝐁.𝐌.𝐁-𝐗𝐌𝐃 ⌟⿻⃮͛🚘𖤐
+// code by ⿻ ⌜ B.M.B-XMD ⌟⿻⃮͛🧑‍💻𖤐
 
 const axios = require("axios");
 const config = require('../config');
@@ -31,14 +31,14 @@ async (conn, mek, m, {
     // give credit and use
     const imageMessage = {
       image: { url: screenshotUrl },
-      caption: "*WEB SS DOWNLOADER*\n\n> *© Powered By B.M.B TECH*",
+      caption: "*WEB SS DOWNLOADER*\n\n> *© Powered by 𝙱.𝙼.𝙱-𝚇𝙼𝙳*",
       contextInfo: {
         mentionedJid: [m.sender],
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: '120363382023564830@newsletter',
-          newsletterName: "bmb tech",
+          newsletterName: "𝙱.𝙼.𝙱-𝚇𝙼𝙳",
           serverMessageId: 143,
         },
       },
@@ -51,4 +51,4 @@ async (conn, mek, m, {
   }
 });
 
-// ⿻ ⌜ 𝙱.𝙼.𝙱-𝚇𝙼𝙳 ⌟⿻⃮͛🇹🇿𖤐
+// ⿻ ⌜ bmb tech ⌟⿻⃮͛🧑‍💻𖤐

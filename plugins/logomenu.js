@@ -49,7 +49,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/6lwftg.jpg` },
+                image: { url: `https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],

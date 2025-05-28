@@ -26,7 +26,7 @@ cmd({
     const botNumber = conn.user.id.split(":")[0] + '@s.whatsapp.net';
 
     if (m.mentionedJid.includes(botNumber)) {
-      const thumbnailRes = await axios.get(config.MENU_IMAGE_URL || "https://files.catbox.moe/ug8w1x.jpg", {
+      const thumbnailRes = await axios.get(config.MENU_IMAGE_URL || "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg", {
         responseType: 'arraybuffer'
       });
       const thumbnailBuffer = Buffer.from(thumbnailRes.data, 'binary');
@@ -45,7 +45,7 @@ cmd({
             mediaType: 1,
             renderLargerThumbnail: true,
             thumbnail: thumbnailBuffer,
-            mediaUrl: "https://files.catbox.moe/6lwftg.jpg", // Static image URL
+            mediaUrl: "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg", // Static image URL
             sourceUrl: "https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z",
             showAdAttribution: true
           }

@@ -172,7 +172,7 @@ ${repoData.description || 'No description provided'}
 
         // Send image with repo info
         await conn.sendMessage(from, {
-            image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/ug8w1x.jpg' },
+            image: { url: config.MENU_IMAGE_URL || 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg' },
             caption: selectedStyle,
             contextInfo: { 
                 mentionedJid: [m.sender],

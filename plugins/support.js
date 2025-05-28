@@ -11,7 +11,7 @@ cmd({
     alias : "version",
     desc: " allmenu",
     category: "allmenu",
-    react: "🦜",
+    react: "🫅",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -19,34 +19,38 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 let dec = `    
 ⟣──────────────────⟢
-▧ *ᴄʀᴇᴀᴛᴏʀ* : *B.M.B-XMD  (🇹🇿)*
+▧ *ᴄʀᴇᴀᴛᴏʀ* : *B.M.B-XMD  (🧑‍💻)*
 ▧ *ᴍᴏᴅᴇ* : *${config.MODE}*
 ▧ *ᴘʀᴇғɪx* : *${config.PREFIX}*
 ▧ *ʀᴀᴍ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ▧ *ᴠᴇʀsɪᴏɴ* : *V.5* ⚡
 ▧ *ᴜᴘᴛɪᴍᴇ* : ${runtime(process.uptime())}
+
 ⟣──────────────────⟢
 
-> 𝐁.𝐌.𝐁-𝐗𝐌𝐃
+> ☣️ B.M.B-BOT ☣️ 
 
 ⟣──────────────────⟢
 ${readMore}
-CHANNEL🛠️
+\ CHANNEL🛠️\
 https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z
 
-GROUP 👥
-https://chat.whatsapp.com/JpIXcc3AndB3d9pdK2Cg1I
+\ GROUP\ 👥
 
-B.M.B-XMD *Dev🧑‍💻*
-https://wa.me/255767862457?text=Support!
+[https://chat.whatsapp.com/BKoqNbYGCkK5apBNP0nzI3]
+
+\ BMB XMD\ *Dev🧑‍💻*
+
+wa.me/+255767862457 ?text=Support!
 
 ⟣──────────────────⟢
+
 `;
 
 await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.ibb.co/QFQfWrZF/bmb-xmd.jpg` },
+                image: { url: `https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -54,7 +58,7 @@ await conn.sendMessage(
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363382023564830@newsletter',
-                        newsletterName: '『 B.M.B-XMD 』',
+                        newsletterName: '『 ☣️ B.M.B-XMD 🦖 』',
                         serverMessageId: 143
                     }
                 }
@@ -74,3 +78,4 @@ await conn.sendMessage(
         reply(`${e}`);
     }
 });
+    

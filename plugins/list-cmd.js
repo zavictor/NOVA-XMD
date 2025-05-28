@@ -73,7 +73,7 @@ cmd({
         await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/7zfdcq.jpg' },
+                image: { url: config.MENU_IMAGE_URL || 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg' },
                 caption: menuText,
                 contextInfo: {
                     mentionedJid: [m.sender],

@@ -55,7 +55,7 @@ cmd({
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: config.MENU_IMAGE_URL || 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/bmbmenu.jpg' },
+                        image: { url: config.MENU_IMAGE_URL || 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg' },
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
@@ -423,7 +423,7 @@ cmd({
                                 await conn.sendMessage(
                                     senderID,
                                     {
-                                        image: { url: config.MENU_IMAGE_URL || 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/bmbmenu.jpg' },
+                                        image: { url: config.MENU_IMAGE_URL || 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg' },
                                         caption: selectedMenu.content,
                                         contextInfo: contextInfo
                                     },

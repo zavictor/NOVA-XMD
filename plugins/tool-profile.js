@@ -37,13 +37,13 @@ async (conn, mek, m, { from, sender, isGroup, reply, quoted, participants }) => 
                 const member = participants.find(p => p.id === userJid);
                 if (member?.notify) userName = member.notify;
             }
-
+            
             // Try contact DB
             if (userName === userJid.split('@')[0] && conn.contactDB) {
                 const contact = await conn.contactDB.get(userJid).catch(() => null);
                 if (contact?.name) userName = contact.name;
             }
-
+            
             // Try presence as final fallback
             if (userName === userJid.split('@')[0]) {
                 const presence = await conn.presenceSubscribe(userJid).catch(() => null);
