@@ -120,7 +120,7 @@ ${config.DESCRIPTION}`;
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363382023564830@newsletter',
-                    newsletterName: config.OWNER_NAME || '𝐁.𝐌.𝐁-𝐗𝐌𝐃',
+                    newsletterName: config.OWNER_NAME || 'B.M.B TECH',
                     serverMessageId: 143
                 }
             }

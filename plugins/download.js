@@ -7,8 +7,8 @@ const axios = require("axios");
 const { cmd, commands } = require('../command');
 
 cmd({
-  pattern: "ig",
-  alias: ["insta", "Instagram"],
+  pattern: "ig2",
+  alias: ["insta2", "Instagram2"],
   desc: "To download Instagram videos.",
   react: "🎥",
   category: "download",
@@ -247,7 +247,7 @@ cmd({
     const app = data.datalist.list[0];
     const appSize = (app.size / 1048576).toFixed(2); // Convert bytes to MB
 
-    const caption = `╭━━━〔 *APK Downloader* 〕━━━┈⊷
+    const caption = `╭━━━〔 *BMB Downloader* 〕━━━┈⊷
 ┃ 📦 *Name:* ${app.name}
 ┃ 🏋 *Size:* ${appSize} MB
 ┃ 📦 *Package:* ${app.package}

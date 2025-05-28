@@ -27,7 +27,7 @@ cmd({
     }
 
     // Fetch latest version data from GitHub
-    const rawVersionUrl = 'https://raw.githubusercontent.com/bmb200/B.M.B-XMD/main/data/version.json';
+    const rawVersionUrl = 'https://github.com/bmb200/B.M.B-XMD/raw/refs/heads/main/data/version.json';
     let latestVersion = 'Unknown';
     let latestChangelog = 'No changelog available.';
     try {
@@ -69,11 +69,11 @@ Use *.update* to update.`;
       `📌 *Bot Name:* B.M.B-XMD\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
       `💾 *System Info:*\n⏳ *Uptime:* ${uptime}\n📟 *RAM Usage:* ${ramUsage}MB / ${totalRam}MB\n⚙️ *Host Name:* ${hostName}\n📅 *Last Update:* ${lastUpdate}\n\n` +
       `📝 *Changelog:*\n${latestChangelog}\n\n` +
-      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [bmb200](https://github.com/bmb200)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
+      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [Pkdriller](https://github.com/bmb200)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
 
     // Send the status message with an image
     await conn.sendMessage(from, {
-      image: { url: 'https://files.catbox.moe/6lwftg.jpg' },
+      image: { url: 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg' },
       caption: statusMessage,
       contextInfo: {
         mentionedJid: [m.sender],
@@ -81,7 +81,7 @@ Use *.update* to update.`;
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: '120363382023564830@newsletter',
-          newsletterName: 'B.M.B-XMD',
+          newsletterName: '𝙱.𝙼.𝙱-𝚇𝙼𝙳',
           serverMessageId: 143
         }
       }

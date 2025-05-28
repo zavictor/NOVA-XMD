@@ -89,7 +89,7 @@ cmd({
 `;
 
         // Remplacer ce lien par l'URL de l'image que tu m'enverras
-        const imageUrl = "https://files.catbox.moe/6lwftg.jpg"; // Remplace "TON_LIEN_IMAGE_ICI" par ton lien d'image
+        const imageUrl = "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg"; // Remplace "TON_LIEN_IMAGE_ICI" par ton lien d'image
 
         // Vérifier si le message de la commande est correctement reçu
         if (!m.chat) {
