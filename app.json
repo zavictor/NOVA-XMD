@@ -1,7 +1,7 @@
 {
   "name": "B.M.B-XMD",
   "description": "Javascript WhatsApp bot made by bmb200",
-  "logo": "https://i.ibb.co/6fcj4Lm/bmn-tech.jpg",
+  "logo": "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/ping.jpg",
   "keywords": ["B.M.B-XMD"],
   "success_url": "/",
 
@@ -132,7 +132,7 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": false,
-      "value": "https://i.ibb.co/6fcj4Lm/bmn-tech.jpg"
+      "value": "https://files.catbox.moe/eiapc5.jpg"
     },
     
      "DESCRIPTION": {
