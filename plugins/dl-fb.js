@@ -1,130 +1,41 @@
-
-const {cmd} = require('../command');
-const fs = require('fs');
-const getFBInfo = require("@xaviabot/fb-downloader");
-const { default: axios } = require('axios');
-
-cmd({nomCom : "instagram1" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
-  const {ms,repondre,arg} = commandeOptions ;
-
-  let link = arg.join(' ')
-
-  if (!arg[0]) { repondre('Veillez insérer un lien video instagramme');return}; 
-
-  try {
-     
-    let igvid = await axios('https://vihangayt.me/download/instagram?url='+link)
-
-    if (igvid.data.data.data[0].type == 'video') {
-    zk.sendMessage(dest,{video : {url : igvid.data.data.data[0].url},caption : "ig video downloader powered by *Bmw-Md*",gifPlayback : false },{quoted : ms}) 
-    }
-    else {
-        zk.sendMessage(dest,{image : {url : igvid.data.data.data[0].url},caption : "ig image downloader powered by *Bmw-Md*"})
-    }
-  
-  } catch (e) {repondre("erreur survenue lors du téléchargement \n " + e)}
-  
-});
-
+const axios = require("axios");
+const { cmd } = require("../command");
 
 cmd({
-  nomCom: "facebook1",
-  categorie: "Download",
-  reaction: "📽️"
-},
-async (dest, zk, commandeOptions) => {
-  const { repondre, ms, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre('Insert a public facebook video link!');
-    return;
-  }
-
-  const queryURL = arg.join(" ");
-
+  pattern: "fb",
+  alias: ["facebook", "fbdl"],
+  desc: "Download Facebook videos",
+  category: "download",
+  filename: __filename,
+  use: "<Facebook URL>",
+}, async (conn, m, store, { from, args, q, reply }) => {
   try {
-     getFBInfo(queryURL)
-    .then((result) => {
-       let caption = `
-        titre: ${result.title}
-        Lien: ${result.url}
-      `;
-       zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.hd  }, caption: 'facebook video downloader powered by *B.M.B-TECH*' }, { quoted: ms });
-      
-    })
-    .catch((error) => {console.log("Error:", error)
-                      repondre('try fbdl2 on this link')});
+    // Check if a URL is provided
+    if (!q || !q.startsWith("http")) {
+      return reply("*`Need a valid Facebook URL`*\n\nExample: `.fb https://www.facebook.com/...`");
+    }
 
+    // Add a loading react
+    await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
 
-   
+    // Fetch video URL from the API
+    const apiUrl = `https://www.velyn.biz.id/api/downloader/facebookdl?url=${encodeURIComponent(q)}`;
+    const { data } = await axios.get(apiUrl);
+
+    // Check if the API response is valid
+    if (!data.status || !data.data || !data.data.url) {
+      return reply("❌ Failed to fetch the video. Please try another link.");
+    }
+
+    // Send the video to the user
+    const videoUrl = data.data.url;
+    await conn.sendMessage(from, {
+      video: { url: videoUrl },
+      caption: "📥 *Facebook Video Downloaded*\n\n- Powered By Nexus Tech ✅",
+    }, { quoted: m });
+
   } catch (error) {
-    console.error('Erreur lors du téléchargement de la vidéo :', error);
-    repondre('Erreur lors du téléchargement de la vidéo.' , error);
+    console.error("Error:", error); // Log the error for debugging
+    reply("❌ Error fetching the video. Please try again.");
   }
 });
-
-
-
-cmd({ nomCom: "tiktok1", categorie: "Download", reaction: "🎵" }, async (dest, zk, commandeOptions) => {
-  const { arg, ms, prefixe,repondre } = commandeOptions;
-  if (!arg[0]) {
-    repondre(`how to use this command:\n ${prefixe}tiktok tiktok_video_link`);
-    return;
-  }
-
-  const videoUrl = arg.join(" ");
-
- let data = await axios.get('https://vihangayt.me/download/tiktok?url='+ videoUrl) ;
-
-  let tik = data.data.data
-
-      // Envoi du message avec le thumbnail de la vidéo
-      const caption = `
-Author: ${tik.author}
-Description: ${tik.desc}
-      `;
-
-         
-      zk.sendMessage(dest, { video: { url: tik.links[0].a} , caption : caption },{quoted : ms});    
-
-  
-});
-
-cmd({
-  nomCom: "facebook2",
-  categorie: "Download",
-  reaction: "📽️"
-},
-async (dest, zk, commandeOptions) => {
-  const { repondre, ms, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre('Insert a public facebook video link! !');
-    return;
-  }
-
-  const queryURL = arg.join(" ");
-
-  try {
-     getFBInfo(queryURL)
-    .then((result) => {
-       let caption = `
-        titre: ${result.title}
-        Lien: ${result.url}
-      `;
-       zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.sd  }, caption: 'facebook video downloader powered by *B.M.B-TECH*' }, { quoted: ms });
-      
-    })
-    .catch((error) => {console.log("Error:", error)
-                      repondre(error)});
-
-
-   
-  } catch (error) {
-    console.error('Erreur lors du téléchargement de la vidéo :', error);
-    repondre('Erreur lors du téléchargement de la vidéo.' , error);
-  }
-});
-      
