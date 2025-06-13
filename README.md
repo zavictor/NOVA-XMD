@@ -20,7 +20,7 @@
 </p>
 
 <div align="center">
-  <img src="https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/menu1.jpg" width="250" style="border-radius: 20px;" />
+  <img src="https://files.catbox.moe/ik2vqs.jpg" width="250" style="border-radius: 20px;" />
 </div>
 
 ---
