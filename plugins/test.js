@@ -21,13 +21,13 @@ cmd({
             grouped[cat].push(command.pattern);
         }
 
-        // 🕒 Muda na Tarehe ya sasa
+        // 🕒 Muda na tarehe ya sasa
         const now = new Date();
         const time = now.toLocaleTimeString('en-US', { hour12: true });
         const date = now.toISOString().split('T')[0];
         const totalCmds = commands.length;
 
-        // 📝 Jenga menu text
+        // 📝 Andika menu
         let menutext = `╭━━〔 *🌐 ${config.BOT_NAME || 'B.M.B-XMD'} AUTO MENU* 〕━━┈⊷\n`;
         menutext += `┃👤 Owner: ${config.OWNER_NAME}\n`;
         menutext += `┃📟 Mode: ${config.MODE}\n`;
@@ -47,9 +47,11 @@ cmd({
             menutext += `┃◈└────────────┈⊷\n╰──────────────┈⊷\n`;
         }
 
-        // 🎨 Random image kutoka folder
-        const folderPath = path.join(__dirname, '../media/menus');
+        // 📂 Path mpya ya media (kwa picha zenyewe ndani ya /media/)
+        const folderPath = path.join(__dirname, '../media');
         const files = fs.readdirSync(folderPath).filter(f => /^menu\d+\.jpg$/i.test(f));
+        if (files.length === 0) return reply("❌ Hakuna picha za menu (menu1.jpg hadi menu10.jpg) kwenye `media/`!");
+
         const randomImage = files[Math.floor(Math.random() * files.length)];
         const imagePath = path.join(folderPath, randomImage);
 
@@ -61,17 +63,13 @@ cmd({
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 1000,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363382023564830@newsletter',
-                        newsletterName: '🌐𝐁.𝐌.𝐁-𝐗𝐌𝐃🌐',
-                        serverMessageId: 222
-                    }
+                    isForwarded: true
                 }
             },
             { quoted: mek }
         );
 
+        // Optional: Audio ya menu
         await conn.sendMessage(from, {
             audio: { url: 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/media/menu1.mp3' },
             mimetype: 'audio/mp4',
@@ -79,7 +77,7 @@ cmd({
         }, { quoted: mek });
 
     } catch (e) {
-        console.log(e);
-        reply(`❌ Error:\n${e}`);
+        console.log("❌ ERROR:", e);
+        reply(`❌ Error: ${e.message || e}`);
     }
 });
