@@ -1,8 +1,8 @@
 {
   "name": "B.M.B-XMD",
-  "description": "Javascript WhatsApp bot made by bmb200",
-  "logo": "https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/menu1.jpg`",
-  "keywords": ["B.M.B-XMD"],
+  "description": "Javascript WhatsApp bot made by 𝙱.𝙼.𝙱-𝚇𝙼𝙳",
+  "logo": "https://files.catbox.moe/pz83rc.jpg",
+  "keywords": ["POPKID_XTECH"],
   "success_url": "/",
 
     "stack": "container",
@@ -42,19 +42,19 @@
     "AUTO_VOICE": {
       "description": "Make it true if want automatic voice reply .",
       "required": false,
-      "value": "true"
+      "value": "false"
     }, 
 
     "AUTO_REPLY": {
       "description": "Make it true if you want automatic reply.",
       "required": false,
-      "value": "true"
+      "value": "false"
     }, 
 
     "AUTO_STICKER": {
       "description": "Make it true if you want automatic sticker.",
       "required": false,
-      "value": "true"
+      "value": "false"
     }, 
 
 
@@ -109,21 +109,14 @@
       "value": "true"
       
     },
-
-     "ANTI_LINK_KICK": {
-      "description": "Make it true if you want bot auto remove group link.",
-      "required": true,
-      "value": "true"
-      
-    },
     
     "ANTI_BAD": {
       "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
-      "value": "true"
-    },
+      "value": "false"
+    }, 
 
-   "MENTION_REPLY": {
+    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
       "value": "false"
@@ -132,10 +125,10 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": false,
-      "value": "https://files.catbox.moe/jpbpep.jpg"
+      "value": "https://files.catbox.moe/pz83rc.jpg"
     },
-    
-     "DESCRIPTION": {
+     
+    "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
       "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙱.𝙼.𝙱-𝚇𝙼𝙳*"
@@ -156,7 +149,7 @@
     "AUTO_TYPING": {
       "description": "Make it true if you want auto typing.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
     "AUTO_REACT": {
@@ -183,18 +176,6 @@
       "required": false,
       "value": "log"
     }, 
-
-    "ADMIN_EVENTS": {
-      "description": "make it true if want know who promote or demote a member .",
-      "required": false,
-      "value": "false"
-    },
-
-    "WELCOME": {
-      "description": "make it true if want goodbye and welcome message in groups.",
-      "required": false,
-      "value": "true"
-    },
 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",
