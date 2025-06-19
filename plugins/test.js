@@ -6,7 +6,7 @@ const axios = require('axios');
 const fs = require('fs');
 
 cmd({
-    pattern: "menudynamic",
+    pattern: "bmb11",
     alias: ["menup"],
     desc: "Auto Generated Full Menu",
     category: "menu",
