@@ -3,9 +3,10 @@ const { cmd, commands } = require('../command');
 const os = require('os');
 const { runtime } = require('../lib/functions');
 const axios = require('axios');
+const fs = require('fs');
 
 cmd({
-    pattern: "bmb11",
+    pattern: "menudynamic",
     alias: ["menup"],
     desc: "Auto Generated Full Menu",
     category: "menu",
@@ -32,11 +33,14 @@ cmd({
             menutext += `┃◈└────────────┈⊷\n╰──────────────┈⊷\n`;
         }
 
+        // ✅ Tuma video badala ya picha
         await conn.sendMessage(
             from,
             {
-                image: { url: 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/image/menu1.jpg' },
+                video: fs.readFileSync('./media/thumb2.mp4'),
                 caption: menutext,
+                mimetype: 'video/mp4',
+                gifPlayback: true,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 1000,
