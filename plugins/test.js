@@ -10,7 +10,7 @@ cmd({
     alias: ["menup"],
     desc: "Auto Generated Full Menu",
     category: "menu",
-    react: "🧾",
+    react: "🌏",
     filename: __filename
 }, async (conn, mek, m, { from, sender, pushname, reply }) => {
     try {
@@ -21,23 +21,23 @@ cmd({
             grouped[cat].push(command.pattern);
         }
 
-        // 🕒 Muda na tarehe ya sasa
         const now = new Date();
         const time = now.toLocaleTimeString('en-US', { hour12: true });
         const date = now.toISOString().split('T')[0];
         const totalCmds = commands.length;
 
-        // 📝 Andika menu
-        let menutext = `╭━━〔 *🌐 ${config.BOT_NAME || 'B.M.B-XMD'} AUTO MENU* 〕━━┈⊷\n`;
-        menutext += `┃👤 Owner: ${config.OWNER_NAME}\n`;
-        menutext += `┃📟 Mode: ${config.MODE}\n`;
-        menutext += `┃📚 Prefix: ${config.PREFIX}\n`;
-        menutext += `┃🕒 Time: ${time}\n`;
-        menutext += `┃📅 Date: ${date}\n`;
-        menutext += `┃📋 Commands: ${totalCmds}\n`;
-        menutext += `┃⚙️ Platform: VPS\n`;
-        menutext += `┃⏱️ Runtime: ${runtime(process.uptime())}\n`;
-        menutext += `╰━━━━━━━━━━━━━━━⊷\n`;
+        let menutext = `╭━━〔 *🌐 ${config.BOT_NAME || 'B.M.B-XMD'} AUTO MENU* 〕━━┈⊷
+┃❄️╭─────────────·๏
+┃❄️│1️⃣  👤 Owner: ${config.OWNER_NAME}
+┃❄️│2️⃣  📟 Mode: ${config.MODE}
+┃❄️│3️⃣  📚 Prefix: ${config.PREFIX}
+┃❄️│4️⃣  🕒 Time: ${time}
+┃❄️│5️⃣  📅 Date: ${date}
+┃❄️│6️⃣  📋 Commands: ${totalCmds}
+┃❄️│7️⃣  ⚙️ Platform: VPS
+┃❄️│8️⃣  ⏱️ Runtime: ${runtime(process.uptime())}
+┃❄️╰───────────┈⊷
+╰──────────────┈⊷\n`;
 
         for (const [category, cmds] of Object.entries(grouped)) {
             menutext += `\n╭━━〔 *${category}* 〕━━┈⊷\n┃◈╭─────────────·๏\n`;
@@ -47,10 +47,9 @@ cmd({
             menutext += `┃◈└────────────┈⊷\n╰──────────────┈⊷\n`;
         }
 
-        // 📂 Path mpya ya media (kwa picha zenyewe ndani ya /media/)
         const folderPath = path.join(__dirname, '../media');
         const files = fs.readdirSync(folderPath).filter(f => /^menu\d+\.jpg$/i.test(f));
-        if (files.length === 0) return reply("❌ Hakuna picha za menu (menu1.jpg hadi menu10.jpg) kwenye `media/`!");
+        if (files.length === 0) return reply("❌ Hakuna picha za menu kwenye `media/`!");
 
         const randomImage = files[Math.floor(Math.random() * files.length)];
         const imagePath = path.join(folderPath, randomImage);
@@ -62,14 +61,18 @@ cmd({
                 caption: menutext,
                 contextInfo: {
                     mentionedJid: [m.sender],
-                    forwardingScore: 1000,
-                    isForwarded: true
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363382023564830@newsletter',
+                        newsletterName: '🌐𝐁.𝐌.𝐁-𝐗𝐌𝐃🌐',
+                        serverMessageId: 143
+                    }
                 }
             },
             { quoted: mek }
         );
 
-        // Optional: Audio ya menu
         await conn.sendMessage(from, {
             audio: { url: 'https://github.com/bmb200/BMB-DATA/raw/refs/heads/main/media/menu1.mp3' },
             mimetype: 'audio/mp4',
