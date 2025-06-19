@@ -2,10 +2,9 @@
   "name": "B.M.B-XMD",
   "description": "Javascript WhatsApp bot made by 𝙱.𝙼.𝙱-𝚇𝙼𝙳",
   "logo": "https://files.catbox.moe/pz83rc.jpg",
-  "keywords": ["POPKID_XTECH"],
+  "keywords": ["B.M.B-XMD"],
   "success_url": "/",
-
-    "stack": "container",
+  "stack": "container",
   "env": {
     "SESSION_ID": {
       "description": "Put the session-id here.",
@@ -29,9 +28,7 @@
       "description": "select your bot work type public-private-inbox-group.",
       "required": false,
       "value": "public"
-      
     },
-    
     
     "ALWAYS_ONLINE": {
       "description": "Make it true if want always online.",
@@ -57,7 +54,6 @@
       "value": "false"
     }, 
 
-
     "AUTO_STATUS_SEEN": {
       "description": "Make it true for automatic status seen.",
       "required": true,
@@ -80,34 +76,30 @@
       "description": "Type custom message on status reply",
       "required": true,
       "value": "*SEEN YOUR STATUS BY B.M.B-XMD 🖤*"
-   
-     }, 
+    }, 
     
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
       "value": "𝙱.𝙼.𝙱-𝚇𝙼𝙳"
-}, 
+    }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
       "value": "255767862457"
-
     }, 
 
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
       "value": "B.M.B-XMD"
-
-      }, 
+    }, 
 
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
       "value": "true"
-      
     },
     
     "ANTI_BAD": {
@@ -134,7 +126,7 @@
       "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙱.𝙼.𝙱-𝚇𝙼𝙳*"
     },
 
-      "DELETE_LINKS": {
+    "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
       "required": false,
       "value": "true"
@@ -162,7 +154,6 @@
       "description": "Make it true if you want custom reactions.",
       "required": false,
       "value": "false"
-      
     }, 
     
     "CUSTOM_REACT_EMOJIS": {
@@ -181,15 +172,25 @@
       "description": "Make it true if you want bot read your all sms just now.",
       "required": false,
       "value": "false"
+    },
+
+    "ANTICALL": {
+      "description": "Make it true if you want to block calls.",
+      "required": false,
+      "value": "true"
+    },
+
+    "CHATBOT": {
+      "description": "Make it true if you want chatbot to reply to all messages.",
+      "required": false,
+      "value": "false"
     }
+  },
 
-},
-
-     "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-        }
-     ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
   "stack": "heroku-24"
-}
-  
+  }
