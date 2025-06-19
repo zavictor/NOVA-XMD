@@ -1,143 +1,88 @@
-const axios = require('axios');
-const config = require('../config');
-const { cmd, commands } = require('../command');
-const util = require("util");
-const { getAnti, setAnti, initializeAntiDeleteSettings } = require('../data/antidel');
-
-// Initialize AntiDelete settings
-initializeAntiDeleteSettings();
-
-cmd({
-    pattern: "antidelete",
-    alias: ['antidel', 'ad'],
-    desc: "Sets up the Antidelete feature.",
-    category: "misc",
-    filename: __filename
-},
-async (conn, mek, m, { from, reply, q, text, isCreator, fromMe }) => {
-    if (!isCreator) return reply('⚠️ This command is only for the bot owner. ⚠️');
-
-    try {
-        const command = q?.toLowerCase();
-
-        switch (command) {
-            // Enable AntiDelete globally (both GC and DM)
-            case 'on':
-                await setAnti('gc', false); // Disable in Group Chats
-                await setAnti('dm', false); // Disable in Direct Messages
-                return reply('🔴 _AntiDelete is now OFF for Group Chats and Direct Messages._');
-
-            // Disable AntiDelete for Group Chats
-            case 'off gc':
-                await setAnti('gc', false);
-                return reply('❌ _AntiDelete for Group Chats is now DISABLED._');
-
-            // Disable AntiDelete for Direct Messages
-            case 'off dm':
-                await setAnti('dm', false);
-                return reply('❌ _AntiDelete for Direct Messages is now DISABLED._');
-
-            // Toggle AntiDelete for Group Chats
-            case 'set gc':
-                const gcStatus = await getAnti('gc');
-                await setAnti('gc', !gcStatus); // Toggle state
-                return reply(`🔄 _AntiDelete for Group Chats is now ${!gcStatus ? 'ENABLED' : 'DISABLED'}._`);
-
-            // Toggle AntiDelete for Direct Messages
-            case 'set dm':
-                const dmStatus = await getAnti('dm');
-                await setAnti('dm', !dmStatus); // Toggle state
-                return reply(`🔄 _AntiDelete for Direct Messages is now ${!dmStatus ? 'ENABLED' : 'DISABLED'}._`);
-
-            // Enable AntiDelete for both Group Chats and Direct Messages
-            case 'set all':
-                await setAnti('gc', true);
-                await setAnti('dm', true);
-                return reply('✅ _AntiDelete has been ENABLED for all chats._');
-
-            // Show current AntiDelete status
-            case 'status':
-                const currentDmStatus = await getAnti('dm');
-                const currentGcStatus = await getAnti('gc');
-                return reply(`🔍 _AntiDelete Status:_\n\n*DM AntiDelete:* ${currentDmStatus ? '✅ ENABLED' : '❌ DISABLED'}\n*Group Chat AntiDelete:* ${currentGcStatus ? '✅ ENABLED' : '❌ DISABLED'}`);
-
-            // Show Help Message for all available commands
-            default:
-                const helpMessage = `
-                -- *AntiDelete Command Guide:* --
-                • \`\`.antidelete on\`\` - 🔴 Turn OFF AntiDelete for all chats (disabled by default)
-                • \`\`.antidelete off gc\`\` - ❌ Disable AntiDelete for Group Chats
-                • \`\`.antidelete off dm\`\` - ❌ Disable AntiDelete for Direct Messages
-                • \`\`.antidelete set gc\`\` - 🔄 Toggle AntiDelete for Group Chats
-                • \`\`.antidelete set dm\`\` - 🔄 Toggle AntiDelete for Direct Messages
-                • \`\`.antidelete set all\`\` - ✅ Enable AntiDelete for all chats
-                • \`\`.antidelete status\`\` - 🔍 Check current AntiDelete status`;
-
-                return reply(helpMessage);
-        }
-    } catch (e) {
-        console.error("⚠️ Error in antidelete command:", e);
-        return reply("❌ An error occurred while processing your request.");
-    }
-});
+const settingsManager = require('../lib/settingsmanager'); // Path to your settings manager
+const { cmd } = require('../command'); // Adjust path as needed to your command registration
 
 cmd({
     pattern: "anticall",
-    alias: ['retrive', '🔥'],
-    desc: "decline all calls❗❌❌.",
-    category: "misc",
-    use: '<query>',
-    filename: __filename
+    alias: ["callblock", "togglecall"],
+    desc: "Manages the anti-call feature. Use: .anticall [on/off]", // Updated description
+    category: "owner",
+    react: "📞",
+    filename: __filename,
+    fromMe: true // Only accessible by the bot's own number
 },
-async (conn, mek, m, { from, reply }) => {
+async (conn, mek, m, { isOwner, reply, from, sender, args, prefix }) => { // Added 'prefix' to destructured parameters
     try {
-        const quotedMessage = m.msg.contextInfo.quotedMessage; // Get the quoted message
-
-        // Check if it's a ViewOnce message
-        if (quotedMessage && quotedMessage.anticall) {
-            const quot = quotedMessage.anticall;
-
-            if (quot.message.callhandler) {
-                let caption = quot.message.imageMessage.caption;
-                let media = await conn.downloadAndSaveMediaMessage(quot.message.imageMessage);
-                return conn.sendMessage(from, { image: { url: media }, caption }, { quoted: mek });
-            }
-
-            if (quot.message.videoMessage) {
-                let caption = quot.message.videoMessage.caption;
-                let media = await conn.downloadAndSaveMediaMessage(quot.message.videoMessage);
-                return conn.sendMessage(from, { video: { url: media }, caption }, { quoted: mek });
-            }
-
-            if (quot.message.audioMessage) {
-                let media = await conn.downloadAndSaveMediaMessage(quot.message.audioMessage);
-                return conn.sendMessage(from, { audio: { url: media } }, { quoted: mek });
-            }
+        if (!isOwner) {
+            return reply("🚫 This command is for the bot owner only.");
         }
 
-        // If there is no quoted message or it's not a ViewOnce message
-        if (!m.quoted) return reply("⚠️ Please reply to a ViewOnce message.");
+        let currentStatus = settingsManager.getSetting('ANTICALL');
+        const arg = args[0] ? args[0].toLowerCase() : ''; // Get the first argument
 
-        if (m.quoted.mtype === "viewOnceMessage") {
-            if (m.quoted.message.imageMessage) {
-                let caption = m.quoted.message.imageMessage.caption;
-                let media = await conn.downloadAndSaveMediaMessage(m.quoted.message.imageMessage);
-                return conn.sendMessage(from, { image: { url: media }, caption }, { quoted: mek });
-            } else if (m.quoted.message.videoMessage) {
-                let caption = m.quoted.message.videoMessage.caption;
-                let media = await conn.downloadAndSaveMediaMessage(m.quoted.message.videoMessage);
-                return conn.sendMessage(from, { video: { url: media }, caption }, { quoted: mek });
-            } else if (m.quoted.message.audioMessage) {
-                let media = await conn.downloadAndSaveMediaMessage(m.quoted.message.audioMessage);
-                return conn.sendMessage(from, { audio: { url: media } }, { quoted: mek });
+        let replyText;
+        let finalReactionEmoji = '📞'; // Default reaction for help/status display
+
+        if (arg === 'on') {
+            if (currentStatus) {
+                replyText = `📞 Anti-call feature is already *enabled*.`;
+                finalReactionEmoji = 'ℹ️'; // Info reaction
+            } else {
+                settingsManager.setSetting('ANTICALL', true);
+                replyText = `📞 Anti-call feature has been *enabled*!`;
+                finalReactionEmoji = '✅'; // Enabled reaction
             }
+        } else if (arg === 'off') {
+            if (!currentStatus) {
+                replyText = `📞 Anti-call feature is already *disabled*.`;
+                finalReactionEmoji = 'ℹ️'; // Info reaction
+            } else {
+                settingsManager.setSetting('ANTICALL', false);
+                replyText = `📞 Anti-call feature has been *disabled*!`;
+                finalReactionEmoji = '❌'; // Disabled reaction
+            }
+        } else if (arg === '') {
+            // No argument provided, show help menu
+            const statusEmoji = currentStatus ? '✅ ON' : '❌ OFF';
+            replyText = `
+*📞 Anti-Call Feature Manager*
+
+Current Status: *${statusEmoji}*
+
+To turn On:
+  \`\`\`${prefix}anticall on\`\`\`
+To turn Off:
+  \`\`\`${prefix}anticall off\`\`\`
+            `.trim(); // .trim() removes leading/trailing whitespace
+            finalReactionEmoji = '❓'; // Question mark reaction for help
         } else {
-            return reply("❌ This is not a valid ViewOnce message.");
+            // Invalid argument
+            replyText = `❌ Invalid argument. Please use \`${prefix}anticall on\`, \`${prefix}anticall off\`, or just \`${prefix}anticall\` for help.`;
+            finalReactionEmoji = '❓'; // Question mark reaction for error/help
         }
+
+        // Send reaction to the command message itself
+        await conn.sendMessage(from, {
+            react: { text: finalReactionEmoji, key: mek.key }
+        });
+
+        // Send the formatted reply message
+        await conn.sendMessage(from, {
+            text: replyText,
+            contextInfo: {
+                mentionedJid: [sender],
+                forwardingScore: 999, // You can adjust or remove this
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363382023564830@newsletter', // Ensure this JID is valid
+                    newsletterName: "𝙱.𝙼.𝙱-𝚇𝙼𝙳",
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
     } catch (e) {
-        console.log("⚠️ Error in vv3:", e);
-        reply("❌ An error occurred while fetching the ViewOnce message.");
+        console.error("Error in anticall command:", e);
+        reply(`An error occurred while managing anti-call: ${e.message}`);
     }
 });
-
-// Credit: YourName | GitHub: github.com/YourHandle
+        
