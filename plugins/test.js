@@ -2,8 +2,8 @@ const config = require('../config');
 const { cmd, commands } = require('../command');
 const os = require('os');
 const { runtime } = require('../lib/functions');
-const axios = require('axios');
 const fs = require('fs');
+const path = require('path');
 
 cmd({
     pattern: "bmb11",
@@ -15,15 +15,29 @@ cmd({
 }, async (conn, mek, m, { from, sender, pushname, reply }) => {
     try {
         const grouped = {};
-
         for (const command of commands) {
             const cat = command.category?.toUpperCase() || "OTHER";
             if (!grouped[cat]) grouped[cat] = [];
             grouped[cat].push(command.pattern);
         }
 
+        // 🕒 Muda na Tarehe ya sasa
+        const now = new Date();
+        const time = now.toLocaleTimeString('en-US', { hour12: true });
+        const date = now.toISOString().split('T')[0];
+        const totalCmds = commands.length;
+
+        // 📝 Jenga menu text
         let menutext = `╭━━〔 *🌐 ${config.BOT_NAME || 'B.M.B-XMD'} AUTO MENU* 〕━━┈⊷\n`;
-        menutext += `┃👤 *Owner:* ${config.OWNER_NAME}\n┃📟 *Mode:* ${config.MODE}\n┃📚 *Prefix:* ${config.PREFIX}\n┃⚙️ *Platform:* VPS\n┃⏱️ *Runtime:* ${runtime(process.uptime())}\n╰━━━━━━━━━━━━━━━⊷\n`;
+        menutext += `┃👤 Owner: ${config.OWNER_NAME}\n`;
+        menutext += `┃📟 Mode: ${config.MODE}\n`;
+        menutext += `┃📚 Prefix: ${config.PREFIX}\n`;
+        menutext += `┃🕒 Time: ${time}\n`;
+        menutext += `┃📅 Date: ${date}\n`;
+        menutext += `┃📋 Commands: ${totalCmds}\n`;
+        menutext += `┃⚙️ Platform: VPS\n`;
+        menutext += `┃⏱️ Runtime: ${runtime(process.uptime())}\n`;
+        menutext += `╰━━━━━━━━━━━━━━━⊷\n`;
 
         for (const [category, cmds] of Object.entries(grouped)) {
             menutext += `\n╭━━〔 *${category}* 〕━━┈⊷\n┃◈╭─────────────·๏\n`;
@@ -33,14 +47,17 @@ cmd({
             menutext += `┃◈└────────────┈⊷\n╰──────────────┈⊷\n`;
         }
 
-        // ✅ Tuma video badala ya picha
+        // 🎨 Random image kutoka folder
+        const folderPath = path.join(__dirname, '../media/menus');
+        const files = fs.readdirSync(folderPath).filter(f => /^menu\d+\.jpg$/i.test(f));
+        const randomImage = files[Math.floor(Math.random() * files.length)];
+        const imagePath = path.join(folderPath, randomImage);
+
         await conn.sendMessage(
             from,
             {
-                video: fs.readFileSync('./media/thumb2.mp4'),
+                image: fs.readFileSync(imagePath),
                 caption: menutext,
-                mimetype: 'video/mp4',
-                gifPlayback: true,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 1000,
