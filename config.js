@@ -40,6 +40,6 @@ module.exports = {
   ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log",
   AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
   ANTICALL: process.env.ANTICALL || "true",
-  CHATBOT: process.env.CHATBOT || "true"
+  CHATBOT: process.env.CHATBOT || "false"
 };
     
