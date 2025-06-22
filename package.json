@@ -1,12 +1,12 @@
 {
-  "name": "POPKID-MD",
+  "name": "NOVA-XMD",
   "version": "4.5.0",
-  "description": "A WhatsApp Bot Created By Popkidxtech",
+  "description": "A WhatsApp Bot Created By bmbtech11",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name POPKID-MD",
-    "stop": "pm2 stop POPKID-MD",
-    "restart": "pm2 restart POPKID-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name NOVA-XMD",
+    "stop": "pm2 stop NOVA-XMD",
+    "restart": "pm2 restart NIVA-XMD"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
