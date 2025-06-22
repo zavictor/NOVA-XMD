@@ -6,7 +6,7 @@
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name NOVA-XMD",
     "stop": "pm2 stop NOVA-XMD",
-    "restart": "pm2 restart NIVA-XMD"
+    "restart": "pm2 restart NOVA-XMD"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",

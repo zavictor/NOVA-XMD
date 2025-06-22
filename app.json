@@ -1,8 +1,10 @@
+
+
 {
   "name": "NOVA-XMD",
-  "description": "Javascript WhatsApp bot made by bmbtech11",
+  "description": "Javascript WhatsApp bot made by 𝙽𝙾𝚅𝙰-𝚇𝙼𝙳",
   "logo": "https://files.catbox.moe/p0xeh3.jpg",
-  "keywords": ["NOVA-XMD"],
+  "keywords": ["https://files.catbox.moe/p0xeh3.jpg"],
   "success_url": "/",
 
     "stack": "container",
@@ -99,14 +101,21 @@
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "𝗡𝗢𝗩𝗔-𝗫𝗠𝗗"
+      "value": "NOVA-XMD"
 
       }, 
 
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
-      "value": "true"
+      "value": "false"
+      
+    },
+
+     "ANTI_LINK_KICK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "false"
       
     },
     
@@ -114,9 +123,9 @@
       "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
       "value": "false"
-    }, 
+    },
 
-    "MENTION_REPLY": {
+   "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
       "value": "false"
@@ -127,8 +136,8 @@
       "required": false,
       "value": "https://files.catbox.moe/p0xeh3.jpg"
     },
-     
-    "DESCRIPTION": {
+    
+     "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
       "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙽𝙾𝚅𝙰-𝚇𝙼𝙳*"
@@ -176,6 +185,18 @@
       "required": false,
       "value": "log"
     }, 
+
+    "ADMIN_EVENTS": {
+      "description": "make it true if want know who promote or demote a member .",
+      "required": false,
+      "value": "false"
+    },
+
+    "WELCOME": {
+      "description": "make it true if want goodbye and welcome message in groups.",
+      "required": false,
+      "value": "false"
+    },
 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",

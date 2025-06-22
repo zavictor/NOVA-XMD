@@ -13,13 +13,13 @@ AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
 // make true if you want auto reply on status 
 AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
 // make true if you want auto reply on status 
-AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY 𝗡𝗢𝗩𝗔-𝗫𝗠𝗗 🤍*",
+AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY NOVA-XMD 🤍*",
 // set the auto reply massage on status reply  
-WELCOME: process.env.WELCOME || "true",
+WELCOME: process.env.WELCOME || "false",
 // true if want welcome and goodbye msg in groups    
 ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group
-ANTI_LINK: process.env.ANTI_LINK || "true",
+ANTI_LINK: process.env.ANTI_LINK || "false",
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
 // make true if want auto voice reply if someone menetion you 
@@ -41,11 +41,11 @@ OWNER_NUMBER: process.env.OWNER_NUMBER || "255767862457",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "𝙽𝙾𝚅𝙰-𝚇𝙼𝙳",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*© powered by 𝙽𝙾𝚅𝙰-𝚇𝙼𝙳*",
+DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙽𝙾𝚅𝙰-𝚇𝙼𝙳*",
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/p0xeh3.jpg",
 // add img for alive msg
-LIVE_MSG: process.env.LIVE_MSG || "> AM ACTIVE *𝗡𝗢𝗩𝗔-𝗫𝗠𝗗*⚡",
+LIVE_MSG: process.env.LIVE_MSG || "> Zinda Hun Yar *NOVA-XMD*⚡",
 // add alive msg here 
 READ_MESSAGE: process.env.READ_MESSAGE || "false",
 // Turn true or false for automatic read msgs
@@ -77,11 +77,6 @@ ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log", 
 // change it to 'same' if you want to resend deleted message in same chat 
-AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
-// make it true for auto recoding
-ANTICALL: process.env.ANTICALL || "false",
+AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
 // make it true for auto recoding 
-OPENAI_API_KEY: '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'
-//other
-};    
-    
+};
