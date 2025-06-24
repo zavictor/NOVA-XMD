@@ -1,81 +1,51 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
+const os = require("os");
 const { runtime } = require('../lib/functions');
-const fs = require('fs');
-const path = require('path');
 
 cmd({
-  pattern: "allmenu",
-  alias: ["menu", "help"],
-  desc: "Auto Generated Full Menu",
-  category: "general",
-  react: "🤖",
+  pattern: "menu",
+  alias: ["help", "allmenu"],
+  desc: "Show all bot commands",
+  category: "main",
+  react: "📜",
   filename: __filename
-}, async (conn, m, { from, sender, pushname, reply }) => {
+}, async (conn, mek, m, { from, reply, pushname }) => {
   try {
-    const grouped = {};
+    const categories = {};
+
     for (const command of commands) {
-      const category = (command.category || "OTHER").toUpperCase();
-      if (!grouped[category]) grouped[category] = [];
-      grouped[category].push(command.pattern);
+      const category = command.category || "other";
+      if (!categories[category]) categories[category] = [];
+      categories[category].push(command.pattern);
     }
 
-    const now = new Date();
-    const localTime = now.toLocaleTimeString("en-US", { hour12: true });
-    const localDate = now.toISOString().split('T')[0];
-    const totalCmds = commands.length;
-    const caption =
-      `🌐 ${config.botname || "Bot"} AUTO MENU\n` +
-      `━━━━━━━━━━━━━━━━━━━\n` +
-      `🌐 Name: ${config.ownername}\n` +
-      `🌐 Owner: ${config.owner}\n` +
-      `🌐 Bot: ${config.botname}\n` +
-      `🕐 Time: ${localTime}\n` +
-      `📅 Date: ${localDate}\n` +
-      `📘 Total Commands: ${totalCmds}\n` +
-      `⏱️ Runtime: ${runtime(process.uptime())}\n` +
-      `━━━━━━━━━━━━━━━━━━━\n`;
+    let menuText = `╭━━〔 *𝐁.𝐌.𝐁-𝐗𝐌𝐃 MENU* 〕━━┈⊷\n┃ 👤 Hello *${pushname}*\n┃ 📅 ${new Date().toLocaleString()}\n┃ ⚙ Total Commands: *${commands.length}*\n╰━━━━━━━━━━━━━━━━━━━⊷\n\n`;
 
-    let menuText = caption;
-    for (const [cat, cmds] of Object.entries(grouped)) {
-      menuText += `\n──『 ${cat} 』──\n`;
-      cmds.sort().forEach(cmd => {
-        menuText += `➤ ${cmd}\n`;
+    for (const [category, cmds] of Object.entries(categories)) {
+      menuText += `╭━━〔 *${category.toUpperCase()}* 〕━━┈⊷\n`;
+      cmds.forEach(cmd => {
+        menuText += `┃◈ • ${config.PREFIX}${cmd}\n`;
       });
-      menuText += "━━━━━━━━━━\n";
+      menuText += `╰━━━━━━━━━━━━━━⊷\n\n`;
     }
 
-    // Image selection from folder
-    const imageFolder = path.join(__dirname, '../media/');
-    const images = fs.readdirSync(imageFolder).filter(file => /^menu\d+\.jpg$/i.test(file));
-    if (images.length === 0) return reply("🚫 Hakuna picha za menu zilizopatikana kwenye folder.");
-
-    const selectedImage = images[Math.floor(Math.random() * images.length)];
-    const imagePath = path.join(imageFolder, selectedImage);
-
-    const msgOptions = {
-      contextInfo: {
-        externalAdReply: {
-          title: "📡 Auto Menu",
-          body: "B.M.B XMD",
-          thumbnailUrl: 'https://github.com/bmb200/B.M.B-XMD/raw/main/BMB.jpg',
-          mediaType: 1,
-          renderLargerThumbnail: true
-        }
-      }
-    };
+    menuText += `> _Powered by B.M.B-XMD_\n`;
 
     await conn.sendMessage(from, {
-      image: fs.readFileSync(imagePath),
-      caption: menuText,
+      text: menuText,
       contextInfo: {
         forwardingScore: 999,
-        isForwarded: true
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: "120363382023564830@newsletter",
+          newsletterName: "𝙱.𝙼.𝙱-𝚇𝙼𝙳"
+        }
       }
-    }, msgOptions);
+    }, { quoted: mek });
 
   } catch (e) {
-    console.error("❌ ERROR:", e);
-    reply("❌ Error: " + (e.message || e));
+    console.error("Menu Error:", e);
+    reply("❌ Failed to display menu.");
   }
 });
