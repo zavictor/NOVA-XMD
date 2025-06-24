@@ -9,7 +9,7 @@ cmd({
   alias: ["help", "allmenu"],
   desc: "Show all available commands",
   category: "main",
-  react: "📜",
+  react: "🩵",
   filename: __filename
 }, async (conn, mek, m, { from, reply, pushname }) => {
   try {
@@ -33,39 +33,39 @@ cmd({
     const mode = config.MODE || 'Public';
     const totalCommands = commands.length;
 
-    // Beautiful Header
+    // Header ya kisasa
     const menuHeader = `
-╭━━━〔 🔰 *𝐁.𝐌.𝐁-𝐓𝐄𝐂𝐇 MENU* 🔰 〕━━━╮
+╭━━━〔 🔰 *𝗡𝗢𝗩𝗔-𝗫𝗠𝗗 MENU* 🔰 〕━━━╮
 ┃ 👤 𝗨𝘀𝗲𝗿: *${pushname}*
 ┃ ⚙️ 𝗠𝗼𝗱𝗲: *${mode.toUpperCase()}*
 ┃ 📅 𝗗𝗮𝘁𝗲: *${currentDate}*
 ┃ ⏰ 𝗧𝗶𝗺𝗲: *${currentTime}* (EAT)
 ┃ 💾 𝗥𝗔𝗠: *${usedRAM}MB / ${totalRAM}MB*
 ┃ 📦 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀: *${totalCommands}*
-┃ 👑 𝗖𝗿𝗲𝗮𝘁𝗼𝗿: *𝙱.𝙼.𝙱-𝚇𝙼𝙳*
+┃ 👑 𝗖𝗿𝗲𝗮𝘁𝗼𝗿: *𝙽𝙾𝚅𝙰-𝚇𝙼𝙳*
 ┃ ✅ 𝗦𝘁𝗮𝘁𝘂𝘀: *ONLINE*
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━╯\n\n`;
 
-    // Menu body
+    // Menu body bila prefix
     let menuBody = "";
 
     for (const [cat, cmds] of Object.entries(categories)) {
       menuBody += `╭━━〔 *${cat.toUpperCase()}* 〕━━┈⊷\n`;
       cmds.forEach(cmd => {
-        menuBody += `┃◈┃ ${config.PREFIX}${cmd}\n`;
+        menuBody += `┃◈┃ ${cmd}\n`;
       });
       menuBody += `╰━━━━━━━━━━━━━━⊷\n\n`;
     }
 
-    const menuText = menuHeader + menuBody + `_Powered by B.M.B-XMD_`;
+    const menuText = menuHeader + menuBody + `_Powered by 𝗡𝗢𝗩𝗔-𝗫𝗠𝗗_`;
 
-    // Random image from /scs
+    // Picha random kutoka /scs/
     const imageFolder = path.join(__dirname, "../scs");
     const images = fs.readdirSync(imageFolder).filter(f => /^menu\d+\.jpg$/i.test(f));
     const randomImage = images[Math.floor(Math.random() * images.length)];
     const imagePath = path.join(imageFolder, randomImage);
 
-    // Send menu image + text
+    // Tuma menu na picha
     await conn.sendMessage(from, {
       image: { url: imagePath },
       caption: menuText,
@@ -74,12 +74,12 @@ cmd({
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: "120363382023564830@newsletter",
-          newsletterName: "𝙱.𝙼.𝙱-𝚇𝙼𝙳"
+          newsletterName: "𝙽𝙾𝚅𝙰-𝚇𝙼𝙳"
         }
       }
     }, { quoted: mek });
 
-    // Send background music
+    // Tuma muziki wa background
     await conn.sendMessage(from, {
       audio: { url: "https://files.catbox.moe/gagjb6.mp3" },
       mimetype: "audio/mp4",
