@@ -1,12 +1,11 @@
-const config = require('../config');
-const { cmd, commands } = require('../command');
+const { cmd, commands } = require("../command");
+const config = require("../config");
 const os = require("os");
-const { runtime } = require('../lib/functions');
 
 cmd({
   pattern: "menu",
   alias: ["help", "allmenu"],
-  desc: "Show all bot commands",
+  desc: "Show all available commands",
   category: "main",
   react: "📜",
   filename: __filename
@@ -20,17 +19,21 @@ cmd({
       categories[category].push(command.pattern);
     }
 
-    let menuText = `╭━━〔 *𝐁.𝐌.𝐁-𝐗𝐌𝐃 MENU* 〕━━┈⊷\n┃ 👤 Hello *${pushname}*\n┃ 📅 ${new Date().toLocaleString()}\n┃ ⚙ Total Commands: *${commands.length}*\n╰━━━━━━━━━━━━━━━━━━━⊷\n\n`;
+    let menuText = `╭━━〔 *B.M.B-XMD MENU* 〕━━┈⊷
+┃ 🤖 Hello *${pushname}*
+┃ 📆 ${new Date().toLocaleString()}
+┃ 💻 Commands Loaded: *${commands.length}*
+╰━━━━━━━━━━━━━━━━━━━⊷\n\n`;
 
-    for (const [category, cmds] of Object.entries(categories)) {
-      menuText += `╭━━〔 *${category.toUpperCase()}* 〕━━┈⊷\n`;
+    for (const [cat, cmds] of Object.entries(categories)) {
+      menuText += `╭━━〔 *${cat.toUpperCase()}* 〕━━┈⊷\n`;
       cmds.forEach(cmd => {
         menuText += `┃◈ • ${config.PREFIX}${cmd}\n`;
       });
       menuText += `╰━━━━━━━━━━━━━━⊷\n\n`;
     }
 
-    menuText += `> _Powered by B.M.B-XMD_\n`;
+    menuText += `_Powered by B.M.B-XMD_`;
 
     await conn.sendMessage(from, {
       text: menuText,
@@ -45,7 +48,7 @@ cmd({
     }, { quoted: mek });
 
   } catch (e) {
-    console.error("Menu Error:", e);
+    console.error(e);
     reply("❌ Failed to display menu.");
   }
 });
