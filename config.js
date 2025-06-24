@@ -78,5 +78,8 @@ ANTI_VV: process.env.ANTI_VV || "true",
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log", 
 // change it to 'same' if you want to resend deleted message in same chat 
 AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
-// make it true for auto recoding 
+// make it true for auto recoding
+CHATBOT: process.env.CHATBOT || "true"
+// make true if you want to enable chatbot replies 
 };
+    
