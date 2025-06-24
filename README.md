@@ -28,12 +28,12 @@
 ## 🚀 Deployment Steps
 
 <sub>➊ Follow GitHub Account:</sub>    
-[![](https://img.shields.io/badge/-Follow%20Account-orange?style=for-the-badge&logo=github)](https://github.com/bmb200)
+[![](https://img.shields.io/badge/-Follow%20Account-orange?style=for-the-badge&logo=github)](https://github.com/novaxmd)
 
 ---
 
 <sub>➋ Fork Repo:</sub>  
-[![](https://img.shields.io/badge/-Fork%20Repo-FF8700?style=for-the-badge&logo=github)](https://github.com/bmb200/B.M.B-XMD/fork)
+[![](https://img.shields.io/badge/-Fork%20Repo-FF8700?style=for-the-badge&logo=github)](https://github.com/novaxmd/NOVA-XMD/fork)
 
 ---
 
@@ -54,7 +54,7 @@
 </p>
 
 **Heroku**  
-[![](https://img.shields.io/badge/-Deploy%20To%20Heroku-6971FF?style=for-the-badge&logo=heroku)](https://dashboard.heroku.com/new?template=https://github.com/bmb200/B.M.B-XMD/tree/main)
+[![](https://img.shields.io/badge/-Deploy%20To%20Heroku-6971FF?style=for-the-badge&logo=heroku)](https://dashboard.heroku.com/new?template=https://github.com/novaxmd/NOVA-XMD/tree/main)
 
 **Render**  
 [![](https://img.shields.io/badge/-Deploy%20on%20Render-black?style=for-the-badge&logo=render)](https://dashboard.render.com/web/new)
