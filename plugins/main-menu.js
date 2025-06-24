@@ -28,7 +28,7 @@ cmd({
     for (const [cat, cmds] of Object.entries(categories)) {
       menuText += `╭━━〔 *${cat.toUpperCase()}* 〕━━┈⊷\n`;
       cmds.forEach(cmd => {
-        menuText += `┃◈ • ${config.PREFIX}${cmd}\n`;
+        menuText += `┃◈┃ ${config.PREFIX}${cmd}\n`;
       });
       menuText += `╰━━━━━━━━━━━━━━⊷\n\n`;
     }
