@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center" style="font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #00ffff, 0 0 20px #0088ff;">ð—¡ð—¢ð—©ð—”-ð—«ð— ð——</h1>
+  <h1 align="center" style="font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #00ffff, 0 0 20px #0088ff;">𝗡𝗢𝗩𝗔-𝗫𝗠𝗗</h1>
 </p>
 
 <p align="center">
@@ -23,27 +23,27 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=50&pause=4800color=RRGGBB&lines=true&vCenter=true&width=815&height=100&lines=NOVA-XMD+DEPLOY+NOW+ENJOY+BOT)](https://git.io/typing-svg) 
 
-### ðŸ”° âžŠ FOLLOW GITHUB
+### 🔰 ➊ FOLLOW GITHUB
 
-[![](https://img.shields.io/badge/âž•_FOLLOW_NOVA-XMD-orange?style=for-the-badge&logo=github)](https://github.com/novaxmd)
-
----
-
-### ðŸ”ƒ âž‹ FORK REPOSITORY
-
-[![](https://img.shields.io/badge/ðŸ”_FORK_THIS_REPO-FF4500?style=for-the-badge&logo=github)](https://github.com/novaxmd/NOVA-XMD/fork)
+[![](https://img.shields.io/badge/➕_FOLLOW_NOVA-XMD-orange?style=for-the-badge&logo=github)](https://github.com/novaxmd)
 
 ---
 
-### ðŸ” âžŒ PAIR SESSION CODE
+### 🔃 ➋ FORK REPOSITORY
 
-[![](https://img.shields.io/badge/ðŸ”_PAIR_CODE_SESSION-8A2BE2?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/)
+[![](https://img.shields.io/badge/🔁_FORK_THIS_REPO-FF4500?style=for-the-badge&logo=github)](https://github.com/novaxmd/NOVA-XMD/fork)
 
 ---
 
-### ðŸ“¸ âž QR SESSION ID
+### 🔐 ➌ PAIR SESSION CODE
 
-[![](https://img.shields.io/badge/ðŸ“·_SCAN_QR_SESSION-FF00FF?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/pair)
+[![](https://img.shields.io/badge/🔐_PAIR_CODE_SESSION-8A2BE2?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/)
+
+---
+
+### 📸 ➍ QR SESSION ID
+
+[![](https://img.shields.io/badge/📷_SCAN_QR_SESSION-FF00FF?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/pair)
 
 ---
 
@@ -51,21 +51,22 @@
 
 ---
 
-### ðŸš€ DEPLOY TO PLATFORM
+### 🚀 DEPLOY TO PLATFORM
 
 **Heroku**  
-[![](https://img.shields.io/badge/ðŸš€_DEPLOY_ON_HEROKU-6971FF?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/novaxmd/NOVA-XMD/tree/main)
+[![](https://img.shields.io/badge/🚀_DEPLOY_ON_HEROKU-6971FF?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/novaxmd/NOVA-XMD/tree/main)
 
 **Render**  
-[![](https://img.shields.io/badge/ðŸš€_DEPLOY_ON_RENDER-black?style=for-the-badge&logo=render)](https://dashboard.render.com/web/new)
+[![](https://img.shields.io/badge/🚀_DEPLOY_ON_RENDER-black?style=for-the-badge&logo=render)](https://dashboard.render.com/web/new)
 
 **TalkDrove**  
-[![](https://img.shields.io/badge/ðŸ“¤_TALKDROVE_DEPLOY-FF004D?style=for-the-badge&logo=telegram)](https://talkdrove.com/share-bot/11)
+[![](https://img.shields.io/badge/📤_TALKDROVE_DEPLOY-FF004D?style=for-the-badge&logo=telegram)](https://talkdrove.com/share-bot/11)
 
 **Koyeb**  
-[![](https://img.shields.io/badge/âš™ï¸_DEPLOY_ON_KOYEB-FF009D?style=for-the-badge&logo=koyeb)](https://app.koyeb.com)
+[![](https://img.shields.io/badge/⚙️_DEPLOY_ON_KOYEB-FF009D?style=for-the-badge&logo=koyeb)](https://app.koyeb.com)
 
 **Railway**  
-[![](https://img.shields.io/badge/ðŸš„_DEPLOY_ON_RAILWAY-orange?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/new)
+[![](https://img.shields.io/badge/🚄_DEPLOY_ON_RAILWAY-orange?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/new)
 
 ---
+
